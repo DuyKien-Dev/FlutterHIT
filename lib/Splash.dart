@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/home.dart';
 
 class Splash extends StatelessWidget {
   @override
@@ -30,16 +31,26 @@ class Splash extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      width: 150,
-                      height: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blueAccent),
-                      child: Center(
-                        child: Image.asset(
-                            "assets/image/src_assets_image_play.png",
-                            height: 50),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Home(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blueAccent),
+                        child: Center(
+                          child: Image.asset(
+                              "assets/image/src_assets_image_play.png",
+                              height: 50),
+                        ),
                       ),
                     ),
                     Container(
@@ -54,11 +65,11 @@ class Splash extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.blueAccent),
-                                child: Center(
-                                  child: Image.asset(
-                            "assets/image/src_assets_image_achievement.png",
-                            height: 40),
-                                ),
+                            child: Center(
+                              child: Image.asset(
+                                  "assets/image/src_assets_image_achievement.png",
+                                  height: 40),
+                            ),
                           ),
                           Container(
                             width: width / 3 - 10,
@@ -66,11 +77,11 @@ class Splash extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.blueAccent),
-                                child: Center(
-                                  child: Image.asset(
-                            "assets/image/src_assets_image_leaderboard.png",
-                            height: 40),
-                                ),
+                            child: Center(
+                              child: Image.asset(
+                                  "assets/image/src_assets_image_leaderboard.png",
+                                  height: 40),
+                            ),
                           ),
                           Container(
                             width: width / 3 - 10,
@@ -78,11 +89,11 @@ class Splash extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.blueAccent),
-                                child: Center(
-                                  child: Image.asset(
-                            "assets/image/src_assets_image_true.png",
-                            height: 40),
-                                ),
+                            child: Center(
+                              child: Image.asset(
+                                  "assets/image/src_assets_image_true.png",
+                                  height: 40),
+                            ),
                           ),
                         ],
                       ),
